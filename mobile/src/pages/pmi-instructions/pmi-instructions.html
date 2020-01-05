@@ -1,0 +1,51 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar color="nuresp">
+    <div style="text-align: right; font-family: 'Gothic'; font-size: 110%; color: rgba(255,255,255,0.9);padding-right: 5%;">
+      teste de força máxima</div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-config">
+  <div style="
+              background-color: transparent;
+              margin-top: 9vh;
+              text-align: left;
+              font-family:'Gothic';
+              font-size: 3.5vh;
+              text-align: center;
+              color: rgba(255, 255, 255, 0.85);">
+    instruções para o seu<br>teste
+  </div>
+
+  <div style="  background-color: transparent;
+                margin-left: 10vw;
+                margin-right: 10vw;
+                margin-top: 12vh;
+                text-align: justify;
+                font-family:'Gothic';
+                font-size: 2.5vh;
+                text-align: start;
+                color: rgba(255, 255, 255, 0.85);">
+
+    1. Feche a tampa traseira e encaixe o filtro bocal<br><br>
+    2. Aperte o botão "iniciar teste"<br><br>
+    3. Sopre todo o ar dos pulmões e encaixe o aparelho na boca<br><br>
+    4. Puxe o ar com toda força pelo bocal até ouvir o som. O esforço dura cerca de três segundos
+  </div>
+
+  <div class="default-button-positioning">
+    <button class="default-button"
+            style="background-image: url('../assets/imgs/icon-play.png');"
+            (click)="vibrateOnClick();
+                    goPmiPage()">
+      iniciar teste
+    </button>
+  </div>
+</ion-content>
+

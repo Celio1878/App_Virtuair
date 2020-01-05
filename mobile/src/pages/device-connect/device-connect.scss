@@ -1,0 +1,18 @@
+page-device-connect {
+
+    .ble-list-item {
+        background-color: transparent;
+        width: 80vw;
+        height: 7vh;
+        color: rgba(255, 255, 255, 0.9);
+        font-family: 'Gothic';
+        font-size: 120%;
+        text-align: center;
+        border-style: solid;
+
+        //border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+}

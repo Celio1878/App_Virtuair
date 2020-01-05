@@ -1,0 +1,8 @@
+{
+  "name": "Nuresp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "3764c929"
+}

@@ -1,0 +1,61 @@
+<!--
+  Generated template for the DeviceConnectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar color="nuresp">
+    <div class="default-header">conexão virtuair</div>
+  </ion-navbar>
+</ion-header>
+
+<body>
+  <ion-content class="background-config">
+    <div style="  background-color: transparent;
+                  margin-top: 9vh;
+                  text-align: center;
+                  font-family:'Gothic';
+                  font-size: 3.5vh;
+                  color: rgba(255, 255, 255, 0.85);">
+      selecione o seu dispositivo<br>virtuair:<br><br>
+    </div>
+
+    <!-- Dispositivos encontrados -->
+    <ion-scroll style=" bottom: 0px;
+                      margin-bottom: 5vh;
+                      height: 58vh;
+                      background-color: rgba(0,0,0,0.2);">
+
+      <div *ngIf="!bleEnabled" class="advise-bar" style="background-color: rgb(87, 98, 255);">
+        bluetooth desabilitado
+      </div>
+      <div *ngIf="!locationEnabled" class="advise-bar">
+        localização desabilitada
+      </div>
+
+      <ion-progress-bar type="indeterminate"></ion-progress-bar>
+      <ion-list no-lines class="vertical-center" style="width: 100vw">
+        <ion-item *ngFor="let bleDevice of bleDevices" (click)="vibrateOnClick();selectDevice(bleDevice.id)"
+          class="ble-list-item">
+          {{getBLEDeviceIdentification(bleDevice)}}
+        </ion-item>
+      </ion-list>
+    </ion-scroll>
+    <!-- Botões -->
+    <div class="default-button-positioning">
+
+      <button  class="default-button" style="background-image: url('../assets/imgs/iconBT.png');"
+        *ngIf="!isConnected()" (click)="vibrateOnClick();startScanning()">
+        buscar dispositivos
+      </button>
+
+      <button class="default-button" style="border-top-width: 1px;background-image: url('../assets/imgs/icon-end.png');"
+        *ngIf="isConnected()" (click)="vibrateOnClick();disconnect()">
+        desconectar
+      </button>
+
+    </div>
+  </ion-content>
+
+</body>

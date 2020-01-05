@@ -1,0 +1,57 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+   <div>
+     <img src="../assets/imgs/logoNuresp.png" class="logo-nuresp">
+   </div>
+ </ion-header>
+
+<body>
+   <ion-content class="background-config">
+
+      <div class="positioning">
+         <form method="POST">
+
+            <input type="email" name="email" placeholder="E-mail"> <br>
+
+            <input type="password" placeholder="Senha"> <br>
+
+            <button class="button" (click)="goHomePage()"> Login </button> <br>
+            <button class="button" (click)="goSignInPage()"> Cadastrar </button> <br>
+            <button class="rescue" (click)="goRescuePage()"> Recuperar Senha </button>
+
+         </form>
+
+      </div>
+
+      <!-- sessão de botões de mídias sociais-->
+    <div class="socialmedia-positioning">
+
+         <button class="socialmedia-button socialmedia-button-to-left"
+           style="background-image: url('../assets/imgs/icon-web.png');" (click)="openUrl()">
+         </button>
+
+         <button class="socialmedia-button socialmedia-button-to-left"
+           style="background-image: url('../assets/imgs/icon-mail.png');" (click)="sendMail()">
+         </button>
+
+         <button class="socialmedia-button socialmedia-button-to-left"
+           style="background-image: url('../assets/imgs/icon-insta.png');" (click)="openInstagram()">
+         </button>
+
+         <button class="socialmedia-button socialmedia-button-to-left"
+           style="background-image: url('../assets/imgs/icon-face.png');" (click)="openFacebook()">
+         </button>
+
+         <button class="socialmedia-button"
+           style="background-image: url('../assets/imgs/icon-privacy.png');" (click)="openPrivacyPolicy()">
+         </button>
+       </div>
+
+   </ion-content>
+</body>

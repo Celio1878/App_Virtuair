@@ -1,0 +1,44 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+  <div>
+    <img src="../assets/imgs/logoNuresp.png" class="logo-nuresp">
+  </div>
+</ion-header>
+
+<body>
+  <ion-content class="background-config">
+    <!-- sessão de botões de navegação-->
+    <div class="button-positioning">
+      <button class="default-button" (click)="vibrateOnClick();goDeviceConnectPage()"
+        style="background-image: url('../assets/imgs/iconBT.png'); font-family:Gothic; ">
+        conexão virtuair
+      </button>
+
+      <button class="default-button"
+        style="border-top-width: 1px; background-image: url('../assets/imgs/iconTrain.png');"
+        (click)="vibrateOnClick();goTrainingInstructionsPage()" [disabled]="!isDeviceSelected()">
+        treinamento respiratório
+      </button>
+
+      <button class="default-button" style="border-top-width: 1px; background-image: url('../assets/imgs/iconPMI.png');"
+        (click)="vibrateOnClick();goPmiInstructionsPage()" [disabled]="!isDeviceSelected()">
+        teste de força máxima
+      </button>
+
+      <!---<button class="default-button" style="border-top-width: 1px; background-image: url('../assets/imgs/icon-config.png');"
+        (click)="vibrateOnClick();goConfigPage()" >
+        configurações
+      </button> --->
+
+      <button class="button" (click)="goLoginPage()"> Logout </button>
+
+    </div>
+  </ion-content>
+
+</body>

@@ -1,0 +1,77 @@
+page-login {
+   .center-image {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+   }
+
+   .logo-nuresp {
+      display: block;
+      position: absolute;
+      margin-left: 10vw;
+      margin-top: 3vh;
+      width: 80vw;
+      height: auto;
+      z-index: -1;
+   }
+
+   .positioning {
+      margin-top: 50vh;
+      margin-left: 70px;
+  }
+
+   input {
+      font-size: 20px;
+      margin-left: 20px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      border: 2px solid rgba($color: #000000, $alpha: 0.5);
+   }::placeholder {
+      text-align: center;
+   }
+
+  .button, .rescue {
+     position: relative;
+     text-align: center;
+     margin-top: 10px;
+     width: 70%;
+     left: 22px;
+     color: white;
+     border-radius: 20px;
+     background-color: #7695eb5b;
+     font-size: 28px;
+     padding: 10px 0;
+  }
+
+  .rescue {
+   margin-top: 8px;
+   background-color: #f0ec0f46;
+  }
+
+   .socialmedia-positioning {
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      text-align: right;
+      margin-bottom: 3.3vh;
+      margin-right: 2.9vw;
+   }
+
+   .socialmedia-button {
+      width: 5.1vh;
+      height: 5.1vh;
+      background-color: transparent; //rgba($color: #000000, $alpha: 0.3);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 5vh auto;
+      color: rgba($color: #000000, $alpha: 0.9);
+   }
+
+   .socialmedia-button-to-left {
+      margin-right: 1.5vw;
+      float: left;
+      display: block;
+   }
+}

@@ -1,0 +1,27 @@
+:root {
+    --circle-size: 90%;
+}
+
+page-training {
+    .filled-circle {
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        background-color: rgba($color: #5465fd, $alpha: 0.7);
+        transition: 0.8s ease-out !important;
+    }
+
+    .empty-circle {
+        width: 75vw;
+        height: 75vw;
+
+        border-radius: 50%;
+        border-width: 0.5%;
+        border-style: solid;
+        border-color: black;
+
+        background-color: transparent;
+        position: absolute;
+    }
+
+}

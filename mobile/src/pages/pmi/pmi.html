@@ -1,0 +1,75 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+
+  # Página de teste -> "Teste de Força Máxima"
+-->
+<ion-header no-border>
+  <ion-navbar color="nuresp">
+    <div class="default-header"> teste de força máxima</div>
+  </ion-navbar>
+</ion-header>
+
+<body>
+
+   <ion-content class="background-config" style="background-color: transparent; position: absolute;">
+      <div style="position: relative;
+         top: 10%;
+         text-align: center;
+         font-family:'Gothic';
+         font-size: 3.5vh;
+         color: rgba(255, 255, 255, 0.85);">
+
+         <span>{{testText}}<br><br></span>
+         <span >{{instructionText}}</span>
+         <span *ngIf="isCountingDown()">{{getCountdownText()}}</span>
+      </div>
+
+      <div class="vertical-center">
+         <div style="background-image: url('../assets/imgs/histogram-shadow.png');" class="histogram-shadow">
+            <img #histogramImg src="../assets/imgs/histogram.png" class="histogram">
+            <img #histogramColor src="../assets/imgs/histogram-color.png" class="histogram histogram-color">
+         </div>
+      </div>
+
+      <div class="result-position">
+         <div *ngIf="isMeasurementeValueReady(0)" style="margin-bottom: 2%;">1. {{getMeasurementValue(0)}} cmh2o</div>
+         <div *ngIf="isMeasurementeValueReady(1)" style="margin-bottom: 2%;">2. {{getMeasurementValue(1)}} cmh2o</div>
+         <div *ngIf="isMeasurementeValueReady(2)" style="margin-bottom: 2%;">3. {{getMeasurementValue(2)}} cmh2o</div>
+      </div>
+
+      <div class="result-position" style="left: 59%;">
+
+         <div *ngIf="isMeasurementeValueReady(3)" style="margin-bottom: 2%;">4. {{getMeasurementValue(3)}} cmh2o
+         </div>
+
+         <div *ngIf="isMeasurementeValueReady(4)" style="margin-bottom: 2%;">5. {{getMeasurementValue(4)}} cmh2o
+         </div>
+
+         <div *ngIf="isMeasurementeValueReady(5)" style="margin-bottom: 2%;">6. {{getMeasurementValue(5)}} cmh2o
+         </div>
+
+      </div>
+
+      <div class="default-button-positioning">
+         <button class="default-button" style="background-image: url('../assets/imgs/icon-play.png');"
+            (click)="startReadingData()" [disabled]="!enableStartButton">
+            iniciar teste
+         </button>
+
+         <button class="default-button" (click)="vibrateOnClick()">
+            Salvar Teste
+         </button>
+
+         <button class="default-button"
+            style="border-top-width: 1px; background-image: url('../assets/imgs/icon-end.png');" (click)="vibrateOnClick();
+               earlyFinish();">
+            Finalizar Teste
+         </button>
+
+      </div>
+
+   </ion-content>
+</body>

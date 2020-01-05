@@ -1,0 +1,52 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar color="nuresp">
+    <div class="default-header"> teste de força máxima</div>
+  </ion-navbar>
+</ion-header>
+
+<body>
+
+  <body>
+    <ion-content class="background-config">
+      <div class="vertical-center">
+        <div style="top: 13vh; position: absolute; width: 95vw; height: auto;">
+          <img src="assets/imgs/lung-back.png">
+        </div>
+      </div>
+
+      <div style="position: absolute;
+                top: 40vh;
+                left: 23.6vw;
+                text-align: left;
+                font-family: 'Gothic';
+                color: rgba(255,255,255,0.9);">
+        <div style="font-size: 12vh; height: 13vh;">{{result}}</div>
+        <div style="font-size: 3.4vh;">cmh2o</div>
+      </div>
+
+      <div class="vertical-center">
+        <div style="bottom: 30vh;
+                    position: absolute;
+                    background-color: transparent;
+                    font-family:'Gothic';
+                    font-size: 3.5vh;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.85);">
+          esse foi seu maior esforço!
+        </div>
+      </div>
+      <div class="default-button-positioning">
+        <button class="default-button" style="background-image: url('../assets/imgs/icon-end.png');"
+          (click)="vibrateOnClick(); goHomePage()">
+          Finalizar Teste
+        </button>
+
+      </div>
+    </ion-content>
+  </body>

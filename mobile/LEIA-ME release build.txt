@@ -1,0 +1,15 @@
+Há um bug na versão 3.3.0 do gradle plugin para gerar certas imagens no android. Portanto deve-se usar o gradle-plugin v3.4.0, que precisa do gradle 5.1.1 para funcionar.
+
+Para a release build funcionar, deve-se configurar a variável de ambiente CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL para:
+
+root@dev:$ export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL="https\://services.gradle.org/distributions/gradle-5.1.1-all.zip"
+root@dev:$ cordova build android
+
+Ou em  <project>/platform/android/cordova/lib/builders/GradleBuilder.js mudar a versão do gradle para 5.1.1-all.zip em 
+
+var distributionUrl = process.env['CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL'] || 'https\\://services.gradle.org/distributions/gradle-5.1.1-all.zip';
+
+
+então, deve-se editar os arquivos <project>/platforms/android/build.gradle e <project>/platforms/android/CordovaLib/build.gradle para garantir que apontem para o plugin certo:
+
+classpath 'com.android.tools.build:gradle:3.4.0'

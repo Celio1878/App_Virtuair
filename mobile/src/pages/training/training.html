@@ -1,0 +1,54 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+
+  # Página de Treino -> "Treinamento Respiratório"
+-->
+<ion-header no-border>
+  <ion-navbar color="nuresp">
+    <div class="default-header">treinamento respiratório</div>
+  </ion-navbar>
+</ion-header>
+
+<body>
+  <ion-content class="background-config">
+    <div>
+      <span class="empty-circle vertical-center" style="top: 15vh; left: 12.5vw;">
+        <span #innerCircle id="inspTxt" class="filled-circle vertical-center" style="font-family: 'Gothic';
+                    font-size: 3vh;
+                    text-align: center;
+                    color: rgba(255,255,255,0.9);">
+          {{motivationText}}
+        </span>
+      </span>
+    </div>
+
+    <div class="vertical-center">
+      <div style="  bottom: 30vh;
+                    position: absolute;
+                    background-color: transparent;
+                    font-family:'Gothic';
+                    font-size: 3.5vh;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.85);">
+        restam {{trainingCounter}}<br>inspirações
+      </div>
+    </div>
+
+    <div class="default-button-positioning">
+      <button class="default-button" style="background-image: url('../assets/imgs/icon-play.png');"
+        (click)="vibrateOnClick(); startReadingData()" *ngIf="!started" [disabled]="!enableStartButton">
+        iniciar treinamento
+      </button>
+
+      <button class="default-button" style="background-image: url('../assets/imgs/icon-end.png');"
+        (click)="vibrateOnClick(); finish()" *ngIf="started">
+        Finalizar Treinamento
+      </button>
+
+    </div>
+
+  </ion-content>
+</body>
